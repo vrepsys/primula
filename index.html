@@ -60,15 +60,16 @@
     $(document).ready(function(){
       
       var slide = 0;
-      var numberSlides = 0
+      var numberSlides = -1;
 
       $('.sliderContent').each(function(){
         numberSlides++;
       });
-
+      console.log("Slide numbers"+numberSlides);
+      
       function checkSliderFinish(){
         if (numberSlides < slide){ 
-          slide = 1;
+          slide = 0;
           $('.imageCarousel').each(function(){
               $(this).show();
           });
@@ -99,17 +100,18 @@
   <h2>Leason #1</h2>
   <p></p>
   <ul class="thumbnails">
-     <li class="span9">
+    <li class="span9">
         <img src="http://placehold.it/120x120" alt="" id="carousel0" class="imageCarousel">
         <img src="http://placehold.it/120x120" alt="" id="carousel1" class="imageCarousel">
         <img src="http://placehold.it/120x120" alt="" id="carousel2" class="imageCarousel">
     </li>
 
-
     <li class="span3">
-      <a href="#" class="thumbnail">
-        <img src="http://placehold.it/120x120" alt="">
-      </a>
+      <h3>About the leason</h3>
+      <ul>
+        <li><b>Duration:</b> 60 minutes</li>
+        <li><b>Resume:</b> This is a leason about the bootstrap</li>
+      </ul>
     </li>
 
     <li class="span9">
@@ -276,6 +278,14 @@
       </div>
     </li>
   
+    <li class="span3">
+      <h3>Requirements</h3>
+      <ul>
+        <li>Debian Squeeze</li>
+        <li>Awesome code editor</li>
+        <li>Fantastic konsole use</li>
+      </ul>
+    </li>
     <li class="span11">
       <form>
         <label>Add comment</label>
