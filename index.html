@@ -58,8 +58,41 @@
 
   <script type="text/javascript">
     $(document).ready(function(){
+      
+      var slide = 0;
+      var numberSlides = 0
+
+      $('.sliderContent').each(function(){
+        numberSlides++;
+      });
+
+      function checkSliderFinish(){
+        if (numberSlides < slide){ 
+          slide = 1;
+          $('.imageCarousel').each(function(){
+              $(this).show();
+          });
+        }
+      }
+
+      console.log(numberSlides)
+      $("#carousel-prev").click(function(){
+        checkSliderFinish();
+        slide--;
+        $('#carousel'+slide).show();
+      })
+      
+      $("#carousel-next").click(function(){
+        $('#carousel'+slide).hide();
+        slide++;
+        checkSliderFinish();
+      })
+
       $('.carousel').carousel({
           interval: 200000
+      }).bind('slide',function(){
+        console.log("Change slide");
+        console.log(slide);
       });
     })
   </script>
@@ -67,15 +100,9 @@
   <p></p>
   <ul class="thumbnails">
      <li class="span9">
-        <div id="myCarousel" class="carousel slide">
-          <!-- Carousel items -->
-          <div class="carousel-inner">
-            <div class="active item"><img src="http://placehold.it/120x120" alt=""></div>
-            <div class="item"><img src="http://placehold.it/120x120" alt=""></div>
-            <div class="item"><img src="http://placehold.it/120x120" alt=""></div>
-          </div>
-          
-      </div>
+        <img src="http://placehold.it/120x120" alt="" id="carousel0" class="imageCarousel">
+        <img src="http://placehold.it/120x120" alt="" id="carousel1" class="imageCarousel">
+        <img src="http://placehold.it/120x120" alt="" id="carousel2" class="imageCarousel">
     </li>
 
 
@@ -141,30 +168,14 @@
                       <label for="sugestion1">Question 3 </label>
                       <input type="text" id ="sugestion1" name="radio1" value="1">
                     </li> 
-
-
                   </ul>
-                  <!--<label for="sugestion1"> What it your opinion? </label>
-                  <input type="text" id ="sugestion1" name="radio1" value 1>
-
-                  <input type="radio" name="radio1" value="1">1
-                  <input type="radio" name="radio1" value="2">2
-                  <input type="radio" name="radio1" value="3">3
-                  <input type="radio" name="radio1" value="4">4
-                  <input type="radio" name="radio1" value="5">5                 
-                  <input type="radio" name="radio1" value="6">6
-
-                  <label for="sugestion2"> What it your opinion? </label>
-                  <textarea id ="sugestion1" name="radio1" />
-                  </textarea>
-                  -->
                 </form>
             </div>
           </div>
         </div>
         <!-- Carousel nav -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        <a id="carousel-prev" class="carousel-control left" href=".carousel" data-slide="prev">&lsaquo;</a>
+        <a id="carousel-next" class="carousel-control right" href=".carousel" data-slide="next">&rsaquo;</a>
       </div>
 
         <!--
@@ -179,41 +190,98 @@
 
 
     
-    <li class="span3">
-      <h3>Users's comments</h3>
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" src="http://placehold.it/48x48">
-        </a>
-        <div class="media-body">
-        <h5 class="media-heading">#User1</h5>
-        <p>Comment #1</p>
-      </div>
+    <li class="span3">  
+      <script type="text/javascript">
+        $(document).ready(function(){
+        })
+      </script>
 
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" src="http://placehold.it/48x48">
-        </a>
-        <div class="media-body">
-        <h5 class="media-heading">#User2</h5>
-        <p>Comment #2</p>
-      </div>
 
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" src="http://placehold.it/48x48">
-        </a>
-        <div class="media-body">
-        <h5 class="media-heading">#User3</h5>
-        <p>Comment #3</p>
+      <h3>Teacher's comments</h3>
+
+      <div id="myCarousel" class="carousel slide">
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="active item">
+              
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="http://placehold.it/48x48">
+                </a>
+                
+                <div class="media-body">
+                  <h5 class="media-heading">#User1</h5>
+                  <p>Comment #1</p>
+                </div>
+              </div>
+
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="http://placehold.it/48x48">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">#User2</h5>
+                  <p>Comment #2</p>
+                </div>
+              </div>
+
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="http://placehold.it/48x48">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">#User3</h5>
+                  <p>Comment #3</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="http://placehold.it/48x48">
+                </a>
+                
+                <div class="media-body">
+                  <h5 class="media-heading">#User1</h5>
+                  <p>Comment #1</p>
+                </div>
+              </div>
+            </div>
+         
+            <div class="item">
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="http://placehold.it/48x48">
+                </a>
+                
+                <div class="media-body">
+                  <h5 class="media-heading">#User1</h5>
+                  <p>Comment #1</p>
+                </div>
+              </div>
+
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="http://placehold.it/48x48">
+                </a>
+                
+                <div class="media-body">
+                  <h5 class="media-heading">#User1</h5>
+                  <p>Comment #1</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
       </div>
-       
     </li>
   
     <li class="span11">
-      <a href="#" class="thumbnail">
-        Footer
-      </a>
+      <form>
+        <label>Add comment</label>
+        <input class="input-block-level" type="text" placeholder="Type Anithing...">
+        <button type="submit" class="btn">Submit</button>
+      </form>
     </li>
   </ul>  
 </div>
