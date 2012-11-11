@@ -30,6 +30,23 @@
         });
  
         $( "#effect" ).hide();
+
+
+
+        //Start ranking
+        $(".icon-chevron-up").click(function(){
+          var id=$(this).attr("id");
+          var value = parseInt($('#rantin-'+id).html());
+          value++;
+          $('#rantin-'+id).html(value);
+        });
+
+        $(".icon-chevron-down").click(function(){
+          var id=$(this).attr("id");
+          var value = parseInt($('#rantin-'+id).html());
+          value--;
+          $('#rantin-'+id).html(value);
+        })
     });
     </script>
 
@@ -135,13 +152,15 @@
                       Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
                     </div>
                     <div style="float: right;width: 10%;text-align: center;">
-                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
-                      200</br>
-                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                      <i id="zero" class="icon-chevron-up" style="cursor: pointer;"></i>
+                      <!--<br/>
+                      200</br>-->
+                      <div id="rantin-zero">210</div>
+                      <i id="zero" class="icon-chevron-down" style="cursor: pointer;"></i>
                     </div>
               </div>
               <div style="text-align: right;">
-                  <button class="btn" style="margin-top: 10px;">Start</button>
+                  <a href="index.html"><button class="btn" style="margin-top: 10px;">Start</button></a>
               </div>
             </td>
           </tr>
@@ -153,13 +172,14 @@
                       Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
                     </div>
                     <div style="float: right;width: 10%;text-align: center;">
-                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
-                      200</br>
+                      <i id="one" class="icon-chevron-up" style="cursor: pointer;"></i>
+                      <!--<br/>200</br>-->
+                      <div id="rantin-one">176</div>
                       <i class="icon-chevron-down" style="cursor: pointer;"></i>
                     </div>
               </div>
               <div style="text-align: right;">
-                  <button class="btn" style="margin-top: 10px;">Start</button>
+                  <a href="index.html"><button class="btn" style="margin-top: 10px;">Start</button></a>
               </div>
             </td>
           </tr>
@@ -172,12 +192,12 @@
                     </div>
                     <div style="float: right;width: 10%;text-align: center;">
                       <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
-                      200</br>
+                      173</br>
                       <i class="icon-chevron-down" style="cursor: pointer;"></i>
                     </div>
               </div>
               <div style="text-align: right;">
-                  <button class="btn" style="margin-top: 10px;">Start</button>
+                  <a href="index.html"><button class="btn" style="margin-top: 10px;">Start</button></a>
               </div>
             </td>
           </tr>
@@ -190,12 +210,12 @@
                     </div>
                     <div style="float: right;width: 10%;text-align: center;">
                       <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
-                      200</br>
+                      162</br>
                       <i class="icon-chevron-down" style="cursor: pointer;"></i>
                     </div>
               </div>
               <div style="text-align: right;">
-                  <button class="btn" style="margin-top: 10px;">Start</button>
+                  <a href="index.html"><button class="btn" style="margin-top: 10px;">Start</button></a>
               </div>
             </td>
           </tr>
@@ -208,12 +228,12 @@
                     </div>
                     <div style="float: right;width: 10%;text-align: center;">
                       <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
-                      200</br>
+                      120</br>
                       <i class="icon-chevron-down" style="cursor: pointer;"></i>
                     </div>
               </div>
               <div style="text-align: right;">
-                  <button class="btn" style="margin-top: 10px;">Start</button>
+                  <a href="index.html"><button class="btn" style="margin-top: 10px;">Start</button></a>
               </div>
             </td>
           </tr>
@@ -226,12 +246,12 @@
                     </div>
                     <div style="float: right;width: 10%;text-align: center;">
                       <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
-                      200</br>
+                      114</br>
                       <i class="icon-chevron-down" style="cursor: pointer;"></i>
                     </div>
               </div>
               <div style="text-align: right;">
-                  <button class="btn" style="margin-top: 10px;">Start</button>
+                  <a href="index.html"><button class="btn" style="margin-top: 10px;">Start</button></a>
               </div>
             </td>
           </tr>
@@ -244,12 +264,12 @@
                     </div>
                     <div style="float: right;width: 10%;text-align: center;">
                       <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
-                      200</br>
+                      99</br>
                       <i class="icon-chevron-down" style="cursor: pointer;"></i>
                     </div>
               </div>
               <div style="text-align: right;">
-                  <button class="btn" style="margin-top: 10px;">Start</button>
+                  <a href="index.html"><button class="btn" style="margin-top: 10px;">Start</button></a>
               </div>
             </td>
           </tr>
@@ -262,12 +282,12 @@
                     </div>
                     <div style="float: right;width: 10%;text-align: center;">
                       <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
-                      200</br>
+                      92</br>
                       <i class="icon-chevron-down" style="cursor: pointer;"></i>
                     </div>
               </div>
               <div style="text-align: right;">
-                  <button class="btn" style="margin-top: 10px;">Start Lesson</button>
+                  <a href="index.html"><button class="btn" style="margin-top: 10px;">Start</button></a>
               </div>
             </td>
           </tr>
