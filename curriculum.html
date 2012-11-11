@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Geekucation</title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">  
+  <link href="css/main.css" rel="stylesheet">
+  <link type="text/css" href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+    <script>
+    $(function() {
+        // run the currently selected effect
+        function runEffect() {
+            var options = {};
+            $( "#effect" ).show( "slide", options, 500, callback );
+        };
+ 
+        //callback function to bring a hidden box back
+        function callback() {
+        };
+ 
+        // set effect from select menu value
+        $( "#curriculum" ).click(function() {
+            runEffect();
+            return false;
+        });
+ 
+        $( "#effect" ).hide();
+    });
+    </script>
+
+
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Geekucation</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">John Smith</a>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#help">Help</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="span6">
+    <legend class="the-legend" style="margin-top: 4px;"> Curriculum </legend>
+    <table id="curriculum" class="table table-striped table-bordered table-hover" style="cursor: pointer;">
+        <tbody>
+          <tr>
+            <td>
+              <div class="curr-item-title">Work creatively on individual and team projects in a range of digital media
+              </div>
+              <div class="curr-item-desc">
+                Select, use and assemble multiple applications across a range of devices to achieve complex goals, including analyzing data and meeting the needs of known users; create, reuse, revise and repurpose digital content with attention to design and audience.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>              
+              <div class="curr-item-title">Represent the relevant aspects of a problem as abstractions that can be described within a program
+              </div>
+              <div class="curr-item-desc">
+                including a conceptual understanding of how data is represented and how instructions are processed within a computer system.
+              </div>
+          </td>
+          </tr>
+                    <tr>
+            <td>              
+              <div class="curr-item-title">Generate, develop and implement creative programmatic solutions to a range of engaging computational problems
+              </div>
+              <div class="curr-item-desc">
+               Explain how and why an algorithm works, and why it represents a good solution to the problem.
+              </div>
+          </td>
+          </tr>
+          <tr>
+            <td>              
+              <div class="curr-item-title">Know the hardware components that make up a computer system
+              </div>
+              <div class="curr-item-desc">
+                How they interact, and how they affect performance; understand how computers can be connected with, monitor, and control physical systems.
+              </div>
+            </td>
+          </tr>
+          <td>              
+              <div class="curr-item-title">Recognize the impact of digital technologies on society and the implications of technological innovation
+              </div>
+              <div class="curr-item-desc">
+                Describe their use in a range of professions; make responsible and effective use of digital technologies.
+              </div>
+            </td>
+          </tr>
+        </table>
+
+  </div>
+  <div class="span6" id="effect" style="width:550px;height: 1000px;">
+    <legend class="the-legend" style="margin-top: 4px; width: 550px;"> Lesson Plans </legend>
+        <button class="btn btn-primary" style="margin-bottom: 10px;font-size: 18px;height: 70px;"><i style="margin-right: 5px" class="icon-plus-sign"></i> CREATE NEW LESSON PLAN </button>
+        <ul class="nav nav-pills">
+          <li class="active">
+            <a href="#">All</a>
+          </li>
+          <li><a href="#">Highest Rated</a></li>
+          <li><a href="#">New</a></li>
+        </ul>
+        <table class="table table-striped table-bordered table-hover" style="cursor: pointer;">
+        <tbody>
+          <tr>
+            <td>
+              <div class="curr-item-title">Introduction to Programming <span class="label label-important">New</span></div>
+              <div class="curr-item-desc">
+                    <div style="float: left;width: 90%;">
+                      Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
+                    </div>
+                    <div style="float: right;width: 10%;text-align: center;">
+                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
+                      200</br>
+                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                    </div>
+              </div>
+              <div style="text-align: right;">
+                  <button class="btn" style="margin-top: 10px;">Start</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="curr-item-title">Basic HTML <span class="label label-important">New</span></div>
+              <div class="curr-item-desc">
+                    <div style="float: left;width: 90%;">
+                      Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
+                    </div>
+                    <div style="float: right;width: 10%;text-align: center;">
+                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
+                      200</br>
+                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                    </div>
+              </div>
+              <div style="text-align: right;">
+                  <button class="btn" style="margin-top: 10px;">Start</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="curr-item-title">Introduction to Javascript</div>
+              <div class="curr-item-desc">
+                    <div style="float: left;width: 90%;">
+                      Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
+                    </div>
+                    <div style="float: right;width: 10%;text-align: center;">
+                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
+                      200</br>
+                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                    </div>
+              </div>
+              <div style="text-align: right;">
+                  <button class="btn" style="margin-top: 10px;">Start</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="curr-item-title">History of Computing <span class="label label-success">Popular</span></div>
+              <div class="curr-item-desc">
+                    <div style="float: left;width: 90%;">
+                      Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
+                    </div>
+                    <div style="float: right;width: 10%;text-align: center;">
+                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
+                      200</br>
+                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                    </div>
+              </div>
+              <div style="text-align: right;">
+                  <button class="btn" style="margin-top: 10px;">Start</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="curr-item-title">Introduction to Programming 2</div>
+              <div class="curr-item-desc">
+                    <div style="float: left;width: 90%;">
+                      Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
+                    </div>
+                    <div style="float: right;width: 10%;text-align: center;">
+                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
+                      200</br>
+                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                    </div>
+              </div>
+              <div style="text-align: right;">
+                  <button class="btn" style="margin-top: 10px;">Start</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="curr-item-title">Advanced HTML</div>
+              <div class="curr-item-desc">
+                    <div style="float: left;width: 90%;">
+                      Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
+                    </div>
+                    <div style="float: right;width: 10%;text-align: center;">
+                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
+                      200</br>
+                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                    </div>
+              </div>
+              <div style="text-align: right;">
+                  <button class="btn" style="margin-top: 10px;">Start</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="curr-item-title">Advanced Javascript</div>
+              <div class="curr-item-desc">
+                    <div style="float: left;width: 90%;">
+                      Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
+                    </div>
+                    <div style="float: right;width: 10%;text-align: center;">
+                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
+                      200</br>
+                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                    </div>
+              </div>
+              <div style="text-align: right;">
+                  <button class="btn" style="margin-top: 10px;">Start</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="curr-item-title">History of Computing 2</div>
+              <div class="curr-item-desc">
+                    <div style="float: left;width: 90%;">
+                      Description hipster ipsum blah blah. A very basic introduction to programming. Students learn to create basic applications using tools provided by KhanAcademy and custom content. <a href="#">more..</a>
+                    </div>
+                    <div style="float: right;width: 10%;text-align: center;">
+                      <i class="icon-chevron-up" style="cursor: pointer;"></i><br/>
+                      200</br>
+                      <i class="icon-chevron-down" style="cursor: pointer;"></i>
+                    </div>
+              </div>
+              <div style="text-align: right;">
+                  <button class="btn" style="margin-top: 10px;">Start Lesson</button>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+
+ 
+
+
+</div> <!--container -->
+
+</body>
+</html>

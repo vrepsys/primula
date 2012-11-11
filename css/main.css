@@ -72,4 +72,32 @@ html, body {
   padding-right:6px;
 }
 
-font-weight: bold;  padding-left: 16px;padding-right:6px;
+.curr-item-title {
+  margin-top: 12px;
+  border-style: none;
+  border-width: 0;
+  line-height: 20px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: 'Lato',Helvetica,Arial,sans-serif;
+  font-size: 12px;
+}
+
+.curr-item-desc {
+  font-size: 13px;
+}
+
+.internal-table {
+  border: 0px;
+}
+
+.internal-table td {
+  border: 0px;
+}
+
+.table tbody td:hover  {
+  background-color: rgba(100, 100, 150, .3) !important;
+}
+
+table td:h
